@@ -1,0 +1,525 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Helvetica Neue',Segoe UI,Roboto,Ubuntu,sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+header{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    padding: 26px 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+
+}
+@media screen and (min-width: 550px){
+    header{
+        padding: 26px 56px;
+    }
+}
+header a.logo{
+    display: block;
+}
+header .logo svg{
+    fill: #e50914;
+    height: 27px;
+}
+@media screen and (min-width: 900px){
+    header .logo svg{
+        height: 45px;
+    }
+}
+header div+div{
+    text-align: right;
+}
+header .btn{
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 3px;
+}
+@media screen and (min-width: 700px){
+    header .btn{
+        padding: 12px 30px;
+    }
+}
+.splash{
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+.splash .gradient{
+    /* background: rgba(0,0,0,.4); */
+    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+    position: absolute;
+    inset: 0;
+}
+.splash .background{
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+}
+.splash .background img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    object-fit: cover;
+}
+.splash .content{
+    padding: 95px 20px;
+    max-width: 655px;
+   
+    display: grid;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+@media screen and (min-width: 1000px){
+  .splash .content{
+    max-width: 1000px;
+  }
+}
+@media screen and (min-width: 550px){
+    .splash .content{
+        padding-top: 235px;
+        padding-bottom: 180px;
+    }
+}
+.splash h1, .splash h2, .splash h3{
+    font-weight: normal;
+}
+.splash h1{
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+.splash h2{
+    font-size: 1.125rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+.splash h3{
+    font-size: 1.125rem;
+}
+@media screen and (min-width: 350px){
+    .splash h1{
+        font-size: 3.125rem;
+        font-weight: bold;
+    }
+    .splash h2{
+        font-size: 1.625rem;
+        margin-top: 13px;
+        margin-bottom: 29px;
+    }
+    .splash h3{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 1000px){
+    .splash h1{
+        font-size: 5.125rem;
+        font-weight: bold;
+    }
+    .splash h2{
+        font-size: 2.625rem;
+        margin-top: 13px;
+        margin-bottom: 29px;
+    }
+    .splash h3{
+        font-size: 1.7rem;
+    }
+}
+.cta form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    row-gap: 15px;
+}
+@media screen and (min-width: 550px){
+    .cta form{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
+}
+.cta input{
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.cta input ~ span{ /*cta means call to action, 
+                    its a random classname that lets me style various forms in diffrent sections*/
+    position: absolute;
+    left: 12px;
+    top: 19px;
+    z-index: 3;
+    color: rgb(155, 154, 154);
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
+.cta input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+.cta input:focus ~ span{
+    top: 4px;
+    font-size: .8rem;
+}
+@media screen and (min-width: 1000px){
+    .cta input{
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .cta input ~ span{ 
+        left: 22px;
+        top: 39px;
+        font-size: 1.3rem;
+    }
+    .cta input:focus{
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .cta input:focus ~ span{
+        top: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+.cta button{
+    font-size: 1rem;
+    padding: 10px 16px;
+    background-color: #e50914;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    margin: 0 auto;
+    
+} 
+
+@media screen and (min-width: 550px){
+    .cta button{
+        font-size: 1.625rem;
+        padding: 12px 26px;
+        border-radius: 2px;
+       
+    } 
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding: 70px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+    text-align: center;
+
+}
+@media screen and (min-width: 550px){
+    section{
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+}
+section.last{
+    border-bottom: 8px solid #222;
+}
+
+section .texts h1{
+    font-size: 1.625rem;
+    margin-bottom: 8px;
+}
+@media screen and (min-width: 550px){
+    section .texts h1{
+        font-size: 3.125rem;
+    }
+}
+section .texts p{
+    font-size: 1rem;
+}
+@media screen and (min-width: 550px){
+    section .texts p{
+        font-size: 1.625rem;
+    }
+}
+.media{
+    position: relative;
+
+}
+.media1{
+    justify-self: right;
+}
+.media.media1 img{  /*first section media image and video*/
+    width: 400px;
+}
+.media.media1 video{
+    width: 74%;
+    position: absolute;
+    top: 62px;
+    left: 52px;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+@media screen and (max-width: 385px){
+    .media.media1 video{
+        width: 70%;
+        position: absolute;
+        top: 62px;
+        left: 52px;
+        margin-left: -5%;
+        margin-top: -5%;
+    }
+}
+
+@media screen and (min-width: 550px){
+    section:nth-child(even) .texts{
+        order: 2;
+    }
+}
+
+
+section .download{
+    border: 2px solid #444;
+    border-radius: 15px;
+    padding: 10px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    width: 280px;
+    left: 50%;
+    margin-left: -140px;
+    gap: 15px;
+    background-color: #000;
+}
+
+
+section .download img{
+    height: 55px;
+    width: auto;
+}
+section .download .img-2{
+    height: 38px;
+    width: auto;
+}
+@media screen and (min-width: 460px){
+    section .download{
+        height: 95px;
+        
+    }
+    section .download img{
+        height: 75px;
+    }
+    section .download .img-2{
+        height: 48px;
+    }
+
+}
+@media screen and (min-width: 1600px){
+    section .download{
+        margin-left: -300px;
+        left: 50%;
+        
+    }
+}
+
+section .download .download-text {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+section .download .download-text h3{
+    margin-bottom: .5px;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    text-align: left;
+}
+section .download .download-text p{
+    color: #0071eb;
+    font-size: .9em;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* Faq */
+.faq{
+    padding: 70px 35px;
+    border-bottom: 8px solid #222;
+}
+.faq h1{
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 550px){
+    .faq h1{
+        font-size: 3.125rem;
+    }
+}
+
+.questions{
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: .8rem;
+}
+@media screen and (min-width: 550px){
+    .questions{
+        font-size: 1.625rem;
+    }
+}
+
+.question{
+    position: relative;
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+
+.question svg{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    transform: rotate(45deg);
+    transition: all 0.2s ease; /*Transforms the x svg icon to plus via rotation*/
+
+}
+@media screen and (min-width: 550px){
+    .question svg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.question .header{
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.question .answer{ 
+    padding: 0px 30px;
+    max-height: 0;   /*maxheight and overflow styling used to hide answers until checked/toggled*/
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.question input[type="checkbox"]{  /*Checkbox used to toggle on and off answers without js*/
+    display: none;                 /*Here we hide checkbox from showing*/
+}
+.question input[type="checkbox"]:checked ~ .answer{ /*If checked the normal styling returns*/
+    padding: 30px 30px;
+    max-height: 600px;
+}
+.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(180deg); /*Transforms the x svg icon back to x via rotation*/
+}
+.faq h3{
+    font-weight: normal;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+.faq form{
+    max-width: 905px;
+    margin: 0 auto;
+}
+
+footer{
+
+    padding: 70px 35px 0px;
+    display: grid;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #737373; 
+}
+@media screen and (min-width: 500px){
+    footer{
+        font-size: 1.125rem;
+    }
+}
+footer > a{
+    margin: 0 0 30px;
+    text-align: left;
+    justify-self: left;
+    font-size: 16px;
+    
+}
+@media screen and (min-width: 500px){
+    footer > a{
+        font-size: 1.250rem;
+    }
+}
+.footer-contain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+@media screen and (min-width: 500px){
+    .footer-contain{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+    }
+}
+@media screen and (min-width: 740px){
+    .footer-contain{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.footerbox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+footer a{
+    color: #737373;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+.copyright{ 
+    margin-top: 50px;
+    padding: 50px 10px;
+    background-color: #111;
+    min-height: 70px;
+    text-align: center;
+    font-size: 0.825rem;
+
+}
+@media screen and (min-width: 500px){
+    .copyright{
+        font-size: 1.125rem;
+    }
+}
+
+.copyright a{
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+.copyright a:hover{
+    transform: scale(1.1);
+}
+
