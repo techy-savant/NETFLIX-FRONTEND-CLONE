@@ -1,4 +1,12 @@
+
 # NETFLIX-FRONTEND-CLONE
-NETFLIX FRONTEND CLONE.  Created with core web technologies HTML &amp; CSS. 
-Check it out here 👉
-https://vals-netflixclone.netlify.app
+
+## About
+This is the code repository for a Netflix clone project
+<br>
+
+![Netflix-clone](<images/Screenshot 2023-08-06 215946.png>)
+
+### Live Site: [netflix-clone](https://vals-netflixclone.netlify.app)
+
+
